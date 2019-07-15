@@ -1,0 +1,39 @@
+
+@mixin size($w,$h:$w,$m:null){
+  width: $w;
+  height: $h;
+  @if($m){
+    margin: $m;
+  }
+}
+
+@mixin setAuto($w, $m:auto){
+  width: $w;
+  margin: $m;
+}
+
+@mixin setBg($color){
+
+  background-color: $color;
+}
+
+@mixin setBorder($w, $c){
+  border: $w solid $c;
+}
+
+@mixin brdRad($tl, $tr:$tl, $br:$tl, $bl:$tl){
+	border-top-left-radius: $tl;
+	border-top-right-radius: $tr;
+	border-bottom-right-radius: $br;
+	border-bottom-left-radius: $bl;
+}
+
+@mixin setPosAbs($top:0, $right:0, $bottom:null, $left:0, $zindex:0){
+
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $zindex;
+}
